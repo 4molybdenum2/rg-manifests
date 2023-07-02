@@ -3,6 +3,7 @@ kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
   name: racing-game
+  namespace: rg
 spec:
   to:
     kind: Service
