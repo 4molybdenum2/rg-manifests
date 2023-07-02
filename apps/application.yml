@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: racing-game-app
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: racing-game
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: apps/overlays/racing-game
+    repoURL: https://github.com/4molybdenum2/rg-manifests
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: false
+    syncOptions:
+    - CreateNamespace=true
