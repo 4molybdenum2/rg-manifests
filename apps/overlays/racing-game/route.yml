@@ -1,0 +1,13 @@
+---
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: racing-game
+spec:
+  to:
+    kind: Service
+    name: racing-game-service
+    weight: 100
+  port:
+    targetPort: 8080
+  wildcardPolicy: None
