@@ -2,12 +2,12 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  name: racing-game
+  name: rg
   namespace: rg
 spec:
   to:
     kind: Service
-    name: racing-game-service
+    name: rg
     weight: 100
   port:
     targetPort: 8080

@@ -2,11 +2,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: racing-game-service
+  name: rg
   namespace: rg
 spec:
   selector:
-    app: racing-game
+    app: rg
   ports:
   - port: 8080
     targetPort: 8080

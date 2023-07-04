@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: racing-game
+  name: rg
   namespace: rg
   labels:
-    app: nginx
+    app: rg
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: racing-game
+      app: rg
   template:
     metadata:
       labels:
-        app: racing-game
+        app: rg
     spec:
       containers:
-      - name: racing-game
+      - name: rg
         image: localhost/racing-game:latest
         resources:
           limits:
