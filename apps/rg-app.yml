@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: rg-app
-  namespace: rg
+  namespace: argocd
 spec:
   destination:
     namespace: rg
